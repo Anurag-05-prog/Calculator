@@ -6,6 +6,7 @@ const currTheme = localStorage.getItem('theme');
 const calculatorDisplay = document.querySelector('h1');
 const inputBtns = document.querySelectorAll('button');
 const clearBtn = document.getElementById('clear-btn');
+const deleteBtn = document.querySelector('.delete');
 
 let firstValue = 0;
 let operatorValue = '';
@@ -85,7 +86,7 @@ inputBtns.forEach((inputBtn) => {
         inputBtn.addEventListener('click', () => useOperator(inputBtn.value));
     } else if(inputBtn.classList.contains('decimal')) {
         inputBtn.addEventListener('click', () => addDecimal());
-    } 
+    }
 });
 
 function resetAll() {
@@ -95,4 +96,13 @@ function resetAll() {
     calculatorDisplay.textContent = '0';
 }
 
-clearBtn.addEventListener('click', resetAll());
+clearBtn.addEventListener('click', resetAll);
+
+function deleteLast() {
+    calculatorDisplay.textContent = calculatorDisplay.textContent.slice(0, -1);
+    if (calculatorDisplay.textContent === '') {
+        calculatorDisplay.textContent = '0';
+    }
+}
+
+deleteBtn.addEventListener('click', deleteLast);
