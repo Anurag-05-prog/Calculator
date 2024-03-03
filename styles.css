@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+
+:root {
+  --background: rgb(218, 240, 255);
+  --primary-color: rgb(23, 24, 26);
+  --primary-variant: rgb(48, 49, 54);
+  --secondary-color: rgb(0, 93, 178);
+  --seconday-variant: rgb(25, 145, 255);
+  --on-primary: rgb(87, 129, 218);
+  --on-primary-alt: rgb(36, 134, 227);
+  --on-background: rgb(97, 97, 97);
+  --drop-shadow: drop-shadow(0 0 1rem rgb(30, 37, 60));
+  --drop-shadow-variant: drop-shadow(0 0 0.3rem rgb(95, 130, 205));
+}
+
+[data-theme="light"] {
+  --background: rgb(218, 240, 255);
+  --primary-color: #fff; /* change */
+  --primary-variant: rgb(48, 49, 54); /* change */
+  --secondary-color: rgb(0, 93, 178);
+  --seconday-variant: rgb(25, 145, 255);
+  --on-primary: rgb(87, 129, 218);
+  --on-primary-alt: rgb(36, 134, 227);
+  --on-background: rgb(97, 97, 97); /* change */
+  --drop-shadow: drop-shadow(0 0 1rem rgb(30, 37, 60));
+  --drop-shadow-variant: drop-shadow(0 0 0.3rem rgb(95, 130, 205));
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Roboto Flex", sans-serif;
+  background-color: var(--background);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  padding: 2.5rem;
+  height: 61.5rem;
+  width: 31rem;
+  border-radius: 3rem;
+  background-color: var(--primary-color);
+  filter: var(--drop-shadow);
+}
+
+.display {
+  margin-top: 2.5rem;
+  height: 12rem;
+  width: 100%;
+  background: var(--primary-color);
+  line-height: 2.5rem;
+}
+
+.keyboard {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  cursor: pointer;
+  width: 5.5rem;
+  height: 5.5rem;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 1.5rem;
+  margin-bottom: 1.5rem;
+  margin-right: 0.8rem;
+  border: none;
+}
+
+button:hover {
+  filter: var(--drop-shadow-variant);
+}
+
+.right-div {
+  margin-right: 0rem;
+}
+
+.bigger-zero {
+  width: 12rem;
+}
+
+.bigger-plus {
+  height: 10rem;
+}
+
+.equals {
+  height: 8rem;
+  background-color: var(--seconday-variant);
+  font-size: 3rem;
+}
+
+.operator {
+  background-color: var(--secondary-color);
+  font-size: 2rem;
+}
+
+.number,
+.decimal {
+  background-color: var(--primary-variant);
+  color: var(--on-primary);
+  font-size: 3rem;
+}
+
+.clear,
+.delete {
+  background-color: var(--on-background);
+  font-size: 2rem;
+}
+
+.dark-mode,
+.light-mode {
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--primary-color);
+  color: var(--on-primary-alt);
+  border: solid 0.1rem var(--on-primary-alt);
+  border-radius: 0.5rem;
+  font-size: 0.3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.light-mode {
+    display: none;
+}
