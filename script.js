@@ -95,4 +95,4 @@ function resetAll() {
     calculatorDisplay.textContent = '0';
 }
 
-clearBtn.addEventListener('click', resetAll);
+clearBtn.addEventListener('click', resetAll());
